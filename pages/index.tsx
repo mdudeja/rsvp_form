@@ -20,9 +20,8 @@ const Index: NextPage = () => {
     }}>
       {errorMsg.length > 0 && <ErrorAlert message={errorMsg} />}
       {successMsg.length > 0 && <SuccessAlert message={successMsg} />}
-      <div className='grid grid-cols-1 md:grid-cols-2 w-screen h-screen mx-0 place-items-center'>
+      <div className='grid grid-cols-1 md:grid-cols-2 w-screen h-screen mx-0 place-items-center mt-16'>
         <div className='bg-cover w-full h-full' style={{ backgroundImage: `url(/images/rainbow.jpg)` }}>
-          {/* <Image src={rainbowPic} alt='rainbow' /> */}
           <p className='fixed bottom-0 left-4 right-0'>
             Photo by <a className='text-sky-800' href="https://unsplash.com/@sharonmccutcheon">
               Alexander Grey
@@ -31,7 +30,7 @@ const Index: NextPage = () => {
             </a>
           </p>
         </div>
-        <div className='px-10 py-16'>
+        <div className='fixed sm:inset-auto md:relative px-10 py-10 mx-4 bg-white rounded-md'>
           <p className='text-2xl mb-8'>{content[lang].description}</p>
           <div>
             <RSVPForm lang={lang} onSubmit={async function handleSubmit(event) {
