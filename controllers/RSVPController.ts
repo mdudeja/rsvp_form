@@ -13,14 +13,15 @@ const _init = async (): Promise<Db | undefined> => {
     }
 }
 
-export const addEntry = async (email: string, language: string, toDelete: boolean): Promise<boolean> => {
-    const exists = await fetchEntry({ email })
+export const addEntry = async (data:
+    { pname: string, email: string, en_selected: boolean, hn_selected: boolean, mt_selected: boolean, toDelete: boolean }): Promise<boolean> => {
+    const exists = await fetchEntry({ email: data.email })
 
     if (!exists) {
         const db = await _init()
         if (db) {
             const collection = db.collection('rsvp')
-            const result = await collection.insertOne({ email, language, toDelete })
+            const result = await collection.insertOne(data)
             return result && result.acknowledged
         }
     }

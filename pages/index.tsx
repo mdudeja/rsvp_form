@@ -37,14 +37,20 @@ const Index: NextPage = () => {
               event.preventDefault();
 
               const form = event.currentTarget
+              const pname = form.pname.value
               const email = form.email.value
-              const language = form.language.value
+              const en_selected = form.en_selected.checked
+              const hn_selected = form.hn_selected.checked
+              const mt_selected = form.mt_selected.checked
               const toDelete = form.to_delete.checked
 
               if (email && validateEmail(email)) {
                 const body = {
+                  pname,
                   email,
-                  language,
+                  en_selected,
+                  hn_selected,
+                  mt_selected,
                   toDelete
                 }
                 const response = await fetch('/api/rsvp', {
