@@ -4,8 +4,8 @@ import { addEntry } from "../../controllers/RSVPController";
 
 export default async function rsvpRoute(req: NextApiRequest, res: NextApiResponse<{ success: boolean, message: string }>) {
     if (req.method === 'POST') {
-        const { pname, email, en_selected, hn_selected, mt_selected, toDelete } = req.body
-        const result = await addEntry({ pname, email, en_selected, hn_selected, mt_selected, toDelete })
+        const { pname, email, en_selected, hn_selected, toDelete } = req.body
+        const result = await addEntry({ pname, email, en_selected, hn_selected, toDelete })
         if (result) {
             res.status(200).json({ success: true, message: 'OK' })
         } else {

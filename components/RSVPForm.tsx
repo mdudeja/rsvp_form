@@ -16,16 +16,12 @@ export default function RSVPForm(
         <label className="block mt-3 md:mt-8 border rounded-md border-dashed border-slate-500 px-4 py-4">
             <span>{content[lang].lang_pref}</span>
             <label className="block align-middle mt-2 md:mt-8">
-                <input name="en_selected" type='checkbox' />
-                <span className='ml-2'>{content[lang].lang_option_en}</span>
-            </label>
-            <label className="block align-middle mt-2 md:mt-8">
                 <input name="hn_selected" type='checkbox' />
                 <span className='ml-2'>{content[lang].lang_option_hn}</span>
             </label>
             <label className="block align-middle mt-2 md:mt-8">
-                <input name="mt_selected" type='checkbox' />
-                <span className='ml-2'>{content[lang].lang_option_mt}</span>
+                <input name="en_selected" type='checkbox' />
+                <span className='ml-2'>{content[lang].lang_option_en}</span>
             </label>
         </label>
         <label className="inline-block align-middle mt-3 md:mt-8">

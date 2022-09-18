@@ -12,7 +12,7 @@ export default function SuccessAlert({ message }: { message: string }) {
     return (
         <>
             {showAlert && (
-                <div className={`bg-green-500 text-white px-6 py-4 border-0 rounded relative mb-4`}>
+                <div className={`bg-green-500 text-white px-6 py-4 border-0 rounded relative mb-4 z-20`}>
                     <span className='text-xl inline-block mr-5 align-middle'>
                         <FontAwesomeIcon icon={faBell} />
                     </span>
