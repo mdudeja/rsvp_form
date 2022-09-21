@@ -9,7 +9,7 @@ const content: { [key: string]: any } = {
         submit: 'Submit',
         checkbox: 'Please delete my email address after this event',
         success: 'Thank you for registering for the event. We will send you the link to join the day before the event.',
-        error: 'There was an error submitting your RSVP. Please try again later.',
+        error: 'It looks like your email ID is already registerd. Please note that you can only register once.',
     },
     'hn': {
         pname: 'नाम',
@@ -21,7 +21,7 @@ const content: { [key: string]: any } = {
         submit: 'सब्मिट',
         checkbox: 'ये इवेंट होने के बाद मेरा ईमेल डिलीट कर देना',
         success: 'रजिस्टर करने के लिए धन्यवाद. हम इवेंट से एक दिन पहले आपके ईमेल पर लिंक भेज देंगे',
-        error: 'कुछ समस्या हो गयी आपका फॉर्म भेजने में. कृपया थोड़ी देर बाद कोशिश करें',
+        error: 'यह लगता है कि आपका ईमेल पहले से ही रजिस्टर है. आप केवल एक बार रजिस्टर कर सकते हैं',
     }
 }
 
