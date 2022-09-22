@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Layout from '../components/Layout';
 import { IParticipant } from '../common/IParticipant';
 
+// Registrations Page
+
 const Registrations: NextPage = () => {
     const router = useRouter();
     const [users, setUsers] = useState([]);
